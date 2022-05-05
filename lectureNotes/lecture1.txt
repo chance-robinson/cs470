@@ -1,0 +1,67 @@
+Logistics
+    1 exam - midterm, takehome?
+    Quizzes for bonus points
+    lots of random extra cred
+    4 Projects
+    Groups for Projects
+    Discussions on Slack
+
+What is intelligence?
+    The ability to aquire and apply knowledge and skills
+    The ability to reason and perform a logical inquiry - intuition vs intellect
+
+What is AI?
+    Artifical intelligence
+    Anything artificial that acts rationally or smart-human-like
+    Examples:
+        Lights turn on/off at different times of day
+        Chargers that turn off when battery is full
+        Logo Generation
+        Control Theory
+        Targeted ads and ad blocker
+
+AI Growth
+    It's been around for a while
+    Is the threat of AI real?
+    Misuse of AI analytics
+
+Agents
+    Rational:
+    Reflex Agent - need memory of environment
+    Model-based reflex Agent
+    Goal based Agents - reaching a goal takes priority
+    Utility based Agents -maximize utility before reaching a goal
+    Atomic/Factored/Structured
+
+Agents
+    Omniscience, Learning, and Autonomy
+
+Environments
+    Observability - can you see the environment
+    Deterministic/Stochastic - 100% certainty, one action will always produce the same outcome
+    Episodic/Sequential - environment where a task is repeated depending on past actions
+    Known/Unknown - 
+    Dynamic/Stochastic
+    Discrete/Continuous
+
+Agents - PEAS Model
+    PEAS: Performance metric, Environment, Actuator, Sensor
+    Chess Example: P= Win/Lose E= Chessboard A=Piece S=Camera
+
+Decision Theory
+    Elements:
+        States
+        actions
+        Consequences
+        Goals
+        Utilities
+        Example: Q(uestion): Which Grad school should you go to?
+                    A(ction): Apply to university X and Y, retake the TOEFL, get a MS degree first
+                    G(oals): You want school with best rep or low tuition
+                    P(roblem): Which grad school should you go to?
+                        Actions:
+                            U(tility)
+                            U(s,a) = U(bad grades, apply to Harvard)
+                                =-10 if your school is great and didnt get admitted
+                                =+10 if you didnt want to go but were forced to apply
+
