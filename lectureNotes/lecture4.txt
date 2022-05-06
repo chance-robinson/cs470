@@ -1,0 +1,96 @@
+Bayes Network HW Example
+    P(J) = P(J/A) <-{John given alarm} * P(A) + P(J/A)P(!A)
+    P(A) = P(A/B)P(B)+P(A/E)P(E)
+    P(J) = P(A/B,E)*P(B)+ ????? (10mins in)
+    P(J) = ((.95)*(.001)+(.95)*(.002))*(.90) + ((.95)*(.001)+(.95)*(.002))*(.05) = .0027075 = 2.7%
+    To calculate the probability of John calling we need to calculate 
+    the odds of the alarm going off given a burglary or earthquake and
+    then multiply it by the odds of him calling.
+
+    ?CORRECT WAY?: P(J) = P(J/A)P(A)+P(J/!A)P(!A) = P(J/A)[P(A|B,E)P(B,E)+P(A|!B,E)P(!B,E)+P(A|B,!E)P(B,!E)+P(A)[...]] -->
+
+Bayesian Networks
+    Chain
+    Fork
+    Collider
+
+Markov Chain
+    What is a Markov chain?
+        You can know the next state given the current state
+    Non-Markov example:
+        Coins from a purse - value on table depends on all the coins in the purse 
+        Lets say 5 quarters,nickels,and dimes
+        For 5 draws 50c = 5 dimes or 1 quarter,dime,and 3 nickels
+        Can't predict next based on just value after 5 draws
+        But if you don't look at the value and just the number of coins drawn 0 still a
+            Markov process. If you just have state 5 = 5,0,0 or 1,1,3
+        -> You can predict the next state
+        Given state 1,1,3 what is the odds you draw a quarter
+            P(a)= 4/10
+    Depending on how you choose to model can determine whether or not something is a 
+        Markov process
+
+Bayesian Networks 
+    How to construct? What are the uses?
+    Monte Carlo runs
+    Sample what happens together- what gets affect when something is changed, etc,
+        to construct Network
+    Know what is dependent on what (example: roll and yaw angle for a plane)
+    Spam example:
+        Adding constant to make sure you don't predict wrong things
+        Dear,Friend,Lunch,Money
+        0.4,0.3,0.2,0.1->Normal(75%)
+        0.3,0.2,0.0,0.5->Spam(25%)
+        P(N/Dear) -> (P(Dear/N)P(N)) = 0.3
+        P(S/Dear) -> (P(Dear/S)P(S)) = 0.075
+        P(N/Lunch) -> P(Lunch/N)P(N) = 0.15
+        P(S/Lunch) -> P(Lunch/S)P(S) = 0
+        To get rid of zero calculations we can add a constant value to alter our values
+        For example in spam we go from 0.3,0.2,0.0,0.5->Spam(25%)
+        to k->0.1     0.4,0.3,0.1,0.6->Spam(25%)
+        (0.4,0.3,0.1,0.6)/Sum
+        We try to avoid zero in distributions
+    Other Questions (Might be on exam) (Time:47mins) (Bayes Note construction 14.6 in Book)
+        Which of the 3 Networks shown above claim that
+            P(G_father,G_mother,G_child)=P(G_father)P(G_mother)P(G_child)
+            Question is asking which one is independent from each other
+            Answer: c
+
+Bayesian Filtering
+    Equations - Given last belief and some input and last state, you can update
+        belief based on prediction, and depedenet on prediction you update again
+        Two steps:
+            prediction
+            update
+        Example:
+            Boat going forward and can be at a discrete point, with a constant wind,
+                theres a 3/4 probability it goes 1 step forward and a 1/4 probability it
+                goes 2 steps forward
+                Observation probability is also noisy, 1/2 sure if you are in the correct spot, 1/4 probability one to the left
+                and 1/4 probability that you are 1 to the right
+            initial state = 1/3,1/3,1/3,0,0,0,0
+            new state     = 1/12,1/6,1/12,0,0,0,0
+            since new state doesnt add to 1 we need to normalize it now so they all add to 1
+                by keeping the proportions the same and multiplying by a constant so the sum is equal to 1
+            new state1 = 11/4,1/2,1/4,0,0,0,0
+            new state2 = 0,3/16,7/16,5/16,1/6,0,0
+            update then normalize
+            new state3 = 0,0,7/64,10/64,1/64,0,0
+            new state4 = 0,0,7/18,10/18,1,18,0,0
+            this is representative of a 1 step prediction model 
+            new state5 = 0,0,0,7/24,37/72,13/72,1/72
+            new state6 = 0,0,0,
+            
+Filtering Example
+    State Transition
+    Evidence
+    normalize
+
+    Motion model:
+        P(x0) = 0.33,0.33,0.33
+        P(X1) = 0.33,0.33,0.33
+        Get Readings
+        P(x1/z1) = 0.231,0.066,0.066
+        Then normalize
+        P(x1/z1) = 0.636,0.182,0.182
+        Update Readings, normalize, rinse, repeat
