@@ -1,0 +1,24 @@
+Uncertainty in AI
+    Environments are inherently unpredictable
+    Sensors are limited in what they can perceives
+    Actuators use motors/mechanisms that are unpredictable
+    AI software can cause Uncertainty
+
+Logic Approach: Summarizing Uncertainty
+    Dentist Example: Assume the most logical problem aka toothache and then other problems
+    This nearly always fails due to laziness, etc..
+
+Probability in AI
+    More than single "best guess" as to state of world
+    Keep probability distribution over whole space of guesses = belief
+    Example problems in robotics:
+        Localization: where is a robot?
+        Mapping - what does the environment look like?
+        Planning - what to do next?
+        Control - what control signals need to be sent to accomplish the plan?
+
+AI in this class is to be an Intelligent Agent
+    https://www.doc.ic.ac.uk/project/examples/2005/163/g0516302/environments/environments.html#:~:text=An%20environment%20is%20static%20if,office%20with%20no%20moving%20objects
+    Rational Agent review
+        A rational agent chooses whichever action maximizes the expected value
+            of the performance peasure, given the percept sequence to date

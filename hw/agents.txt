@@ -1,0 +1,17 @@
+Agents in Russia-Ukraine War
+    Types of agents:
+        Human 
+            Sensors: eyes,ears,skin,etc
+            Percepts:electrical signals,obkects in fields,auditory
+            Actuators:limbs,digits,eyes,tongue
+            Actions:lift a finger,turn left, walk
+        Robots
+Agent is anything that perceives environment and acts on it
+
+Agents:
+    UKRAINE
+    RUSSIA
+    NATO
+
+        |War|Not War|
+Nothing |

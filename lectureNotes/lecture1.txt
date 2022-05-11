@@ -37,6 +37,7 @@ Agents
     Omniscience, Learning, and Autonomy
 
 Environments
+    https://www.doc.ic.ac.uk/project/examples/2005/163/g0516302/environments/environments.html#:~:text=An%20environment%20is%20static%20if,office%20with%20no%20moving%20objects
     Observability - can you see the environment
     Deterministic/Stochastic - 100% certainty, one action will always produce the same outcome
     Episodic/Sequential - environment where a task is repeated depending on past actions
