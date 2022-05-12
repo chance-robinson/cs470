@@ -1,0 +1,40 @@
+1. Consider the Bayesian network and conditional probability tables shown in Figure 14.2 on page 512
+    The letters B, E, A, J, and M stand for Burglary,
+    Earthquake, Alarm, JohnCalls, and MaryCalls , respectively.
+
+
+Compute the following:
+
+(a) The probability that John calls, Mary does not call, the Alarm goes off, that a burglary is occuring, 
+    and that no earthquake is occurring.
+
+        P(¬E)     = .998
+        P(B)      = .001
+        P(A|B,¬E) = .94
+        P(J|A)    = .90
+        P(¬M|A)   = .01
+        P(J) = .94*(.998*)
+
+        
+
+
+(b) The probability that John and Mary both call given that a burglary is going on and that no earthquake is happening.
+
+(c)The probability that an alarm is not on given that an earthquake is happening and no burglary is happening.
+
+2. Draw the Bayesian network associated with the following joint distribution function: P(A,B,C,D)=P(A)P(B|A)P(C|B)P(D|B).
+
+3. Draw the Bayesian network associated with the following joint distribution function: P(A,B,C,D)=P(A)P(B)P(C|A,B)P(D|C).
+
+
+
+Bayes Network HW Example
+    P(J) = P(J/A) <-{John given alarm} * P(A) + P(J/A)P(!A)
+    P(A) = P(A/B)P(B)+P(A/E)P(E)
+    P(J) = P(A/B,E)*P(B)+ ????? (10mins in)
+    P(J) = ((.95)*(.001)+(.95)*(.002))*(.90) + ((.95)*(.001)+(.95)*(.002))*(.05) = .0027075 = 2.7%
+    To calculate the probability of John calling we need to calculate 
+    the odds of the alarm going off given a burglary or earthquake and
+    then multiply it by the odds of him calling.
+
+    ?CORRECT WAY?: P(J) = P(J/A)P(A)+P(J/!A)P(!A) = P(J/A)[P(A|B,E)P(B,E)+P(A|!B,E)P(!B,E)+P(A|B,!E)P(B,!E)+P(A)[...]] -->
