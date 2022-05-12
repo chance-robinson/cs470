@@ -13,5 +13,7 @@ Agents:
     RUSSIA
     NATO
 
-        |War|Not War|
-Nothing |
+           |Russian|Ukraine|Nato|
+Continue   |  80   |  20   |-60 |
+Compromise | -85   |  65   |100 |
+War        |  95   | -55   |-100|
