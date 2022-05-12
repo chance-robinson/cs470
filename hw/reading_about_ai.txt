@@ -1,0 +1,16 @@
+Read an article or watch a video about any 
+latest breakthrough/research in Artificial Intelligence.
+
+Write a paragraph about it (what was cool, what problem they are 
+trying to solve, how feasible it is, and how much time will it 
+take to make it a reality) and attach the link or the article/video.
+
+https://www.artificialintelligence-news.com/2022/04/21/georgia-state-researchers-design-artificial-vision-device-for-microrobots/
+
+In this article researchers at GSU (Georgia State University) were trying to
+solve/improve machine vision in terms of color recognition, an area which can be
+difficult due to the nature of downscaled color sensing devices on smaller
+devices like micro-sized robots. Ultimately this team wants to develop a micro-scale
+camera that can enter narrow spaces unreachable by current technology. The research
+team states that improvement will increase as improvements in 'van der Waals'
+semiconductors improve.

@@ -1,0 +1,32 @@
+Bayes Theorem
+    P(A|B) = (P(B|A)P(A))/P(B)
+
+Event A: having colorectal cancer
+Event B: having a positive hemoccult test
+
+(Information Given)
+P(A)    = .003
+P(¬A)   = .997
+P(B|A)  = .50
+P(B|¬A) = .03
+
+(Information extrapolated)
+P(B)    = P(B|¬A)+P(B|A)*P(A)
+P(B)    = .03+(.5*.003)       = .0315
+P(A|B)  = (P(B|A)P(A))/P(B)
+P(A|B)  = (.50*.003)/.0315    = .0476
+
+Part 1: Bayesian Reasoning
+    1. .5
+    2. .003
+    3. If a person has colorectal cancer, 
+        the probability is 50 percent that this 
+        person will have a positive hemoccult test.
+    4. .0315
+    5. .9685
+
+Part 2: Frequencies
+    1. 15 out of 10,000 people have colorectal canacer
+    2. Frequencies
+    3. I would use Frequencies to explain the numbers to
+        them.
